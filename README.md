@@ -1,2 +1,2 @@
-# mock-wordle
+# Mock Wordle
 Mock Wordle workshop for hack.place()

@@ -1,0 +1,160 @@
+/* Importing the 'Poppins' and 'Inter' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+/* Setting default styles for all elements */
+*{
+    margin: 0; /* Resetting margin */
+    padding: 0; /* Resetting padding */
+    box-sizing: border-box; /* Ensuring box model includes border */
+    font-family: 'Inter-Bold', 'Inter', sans-serif; /* Setting default font */
+}
+
+/* Styling the body element */
+body{
+    min-height: 100vh; /* Minimum height of viewport */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 0 10px; /* Adding padding to the sides */
+    background: linear-gradient(135deg, #00AAFF, #FF69B4); /* Gradient background */
+}
+
+/* Styling elements with class 'wrong' */
+.wrong {
+    color: red; /* Setting text color to red */
+}
+
+/* Styling an element with class 'wrapper' */
+.wrapper{
+    width: 400px; /* Setting a specific width */
+    background-color: #fff; /* White background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+/* Styling 'h1' elements inside '.wrapper' */
+.wrapper h1{
+    font-size: 22px; /* Setting font size */
+    text-align: center; /* Centering text */
+    font-weight: 500; /* Setting font weight */
+    border-bottom: 2px solid #ccc; /* Adding a border at the bottom */
+    margin: 0 20px; /* Adding margins */
+    padding: 20px 25px; /* Adding padding */
+}
+
+/* Styling elements with class 'content' inside '.wrapper' */
+.wrapper .content{
+    margin: 25px 25px 30px; /* Adding margins */
+}
+
+/* Styling elements with class 'word' inside '.content' */
+.content .word{
+    display: flex; /* Using flexbox for layout */
+    flex-wrap: wrap; /* Allowing items to wrap */
+    justify-content: center; /* Centering items horizontally */
+}
+
+/* Styling input elements inside '.word' */
+.word input{
+    height: 51px; /* Setting height */
+    width: 50px; /* Setting width */
+    margin: 4px; /* Adding margins */
+    color: #0F9D58; /* Setting text color */
+    border: 1px solid #b5b5b5; /* Adding a border */
+    background: none; /* Removing background */
+    text-align: center; /* Centering text */
+    border-radius: 10px; /* Adding rounded corners */
+    text-transform: uppercase; /* Uppercasing text */
+    pointer-events: none; /* Disabling pointer events */
+    font-size: 22px; /* Setting font size */
+    font-weight: 500; /* Setting font weight */
+}
+
+/* Styling elements with class 'type-input' */
+.type-input{
+    z-index: -999; /* Setting a low z-index */
+    position: absolute; /* Positioning */
+    pointer-events: none; /* Disabling pointer events */
+    opacity: 0; /* Making element invisible */
+}
+
+/* Adjusting the first child input element inside '.word' */
+.word input:first-child{
+    margin-left: 0; /* Removing left margin */
+}
+
+/* Styling elements with class 'info' inside '.content' */
+.content .info{
+    margin: 20px 0; /* Adding margins */
+}
+
+/* Styling 'p' elements inside '.info' */
+.info p{
+    font-size: 16px; /* Setting font size */
+    margin-bottom: 10px; /* Adding a margin at the bottom */
+}
+
+/* Styling elements with class 'buttons' */
+.buttons{
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-between; /* Spacing items evenly */
+}
+
+/* Styling specific buttons inside '.buttons' */
+.content .buttons .reset, .content .buttons .showhint{
+    width: 48%; /* Setting width */
+    border: none; /* Removing border */
+    cursor: pointer; /* Setting cursor style */
+    color: #fff; /* Setting text color */
+    outline: none; /* Removing outline */
+    padding: 10px 0; /* Adding padding */
+    font-size: 17px; /* Setting font size */
+    background: linear-gradient(135deg, #00AAFF, #FF69B4); /* Gradient background */
+    border-radius: 5px; /* Adding rounded corners */
+    transition: all 0.3s ease; /* Adding transition */
+}
+
+/* Styling button hover states */
+.content .buttons .reset:hover, .content .buttons .showhint:hover{
+    background-color: #1e88e5; /* Changing background color on hover */
+}
+
+/* Applying responsive styles for screens up to 450px wide */
+@media screen and (max-width: 450px) {
+    
+    /* Adjusting width for smaller screens */
+    .wrapper{
+        width: 100%;
+    }
+
+    /* Adjusting font size and padding for smaller screens */
+    .wrapper h1{
+        font-size: 20px;
+        padding: 16px 20px;
+    }
+
+    /* Adjusting margins for smaller screens */
+    .wrapper .content{
+        margin: 25px 20px 30px;
+    }
+
+    /* Adjusting dimensions and font size for smaller screens */
+    .word input{
+        height: 46px;
+        width: 45px;
+        margin: 3px;
+        font-size: 19px;
+    }
+
+    /* Adjusting font size for smaller screens */
+    .content .info p{
+        font-size: 15px;
+    }
+
+    /* Adjusting padding and font size for smaller screens */
+    .content .buttons .reset{
+        padding: 9px 0;
+        font-size: 15px;
+    }
+}

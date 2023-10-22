@@ -1,0 +1,44 @@
+<!DOCTYPE html> <!-- Declaring the file to be an HTML document (allows for connecting CSS & JavaScript files later) -->
+<html lang="en"> <!-- Setting the documnt's primary language to English (Search engines will recognize this) -->
+
+<head> <!-- Meta tags for character set and compatibility -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Linking the style.css file (connecting CSS to HTML) -->
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <title>Mock Wordle | hack.place()</title> <!-- Setting the title of the web page -->
+
+</head>
+
+<!-- <body> Main content of the webpage -->
+
+    <div class="wrapper"> <!-- contains the content (buttons, box to type, etc.) -->
+        <h1>Mock Wordle</h1> <!-- Heading for the Mock Wordle game -->
+        <div class="content"> <!-- Content section containing various game elements -->
+            <input type="text" class="type-input" maxlength="1"> <!-- Input field for typing letters -->
+            <div class="word"></div> <!-- Container for displaying word letters -->
+            <div class="info"> <!-- Information section -->
+                <p class="guess">Remaining Guesses: <span></span></p> <!-- Displaying remaining guesses, The Span tag is just used as a placeholder so user can enter information later within the span tag within the input tag -->
+                <p class="wrong">Incorrect letters: <span></span></p> <!-- Displaying incorrect letters -->
+                <p class="hint">Hint: <span></span></p> <!-- Displaying a hint -->
+                <input type="color" id="bgColorPicker" value="#ffffff"> <!-- this is a more advanced aspect -->
+                    <!-- Add an input element for selecting background color; default color is white; the "id" allows color changes in JavaScript code;  -->
+            </div>
+
+            <div class="buttons"> <!-- Buttons for restarting and showing hints -->
+                <button class="restart">🔄Restart🔄</button>
+                <button class="showhint">💡Hint💡</button>
+                <input class="type-input" type="text" />
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="database.js"></script> <!-- Connecting the database.js JavaScript file to this HTML file -->
+    <script src="script.js"></script> <!-- Connecting the script.js JavaScript file to this HTML file -->
+
+</body>
+
+</html>

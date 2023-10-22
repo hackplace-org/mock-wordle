@@ -1,4 +1,4 @@
-// Setting up variables
+// Setting up variables within "const" (meaning we cannot change the values of the variables later on)
 const inputs = document.querySelector(".word"), // Selecting/Accessing/Retrieving elements with class "word"
     hintTag = document.querySelector(".hint span"), // Selecting/Accessing/Retrieving elements with class "hint" and a span inside
     guessLeft = document.querySelector(".guess span"), // Selecting/Accessing/Retrieving elements with class "guess" and a span inside

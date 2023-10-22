@@ -1,5 +1,5 @@
 # Mock Wordle
-Mock Wordle workshop for hack.place()
+Intermediate HTML/CSS/JS workshop for hack.place()
 
 >**Important**:
 > For this workshop, please have Visual Studio Code (VSCode) downloaded and installed onto your device, as well as the "Live Server" extension in VSCode.

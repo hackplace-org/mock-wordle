@@ -1,0 +1,184 @@
+/* Importing the 'Poppins' and 'Inter' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+/* Setting default styles for all elements */
+*{
+    margin: 0; /* restarting margin */
+    padding: 0; /* restarting padding, padding is space between content and border */
+    box-sizing: border-box; /* Ensuring box model includes border */
+    font-family: 'Inter-Bold', 'Inter', sans-serif; /* Setting default font */
+}
+
+/* Styling the body element (everything in body tag) */
+body{
+    min-height: 100vh; /* Minimum height of viewport, will take up 100% of height of webpage */
+    display: flex; /* creates a flexible and responsive box layout (shrink, stretch, etc.) */
+    align-items: center; /* Center all items vertically */
+    justify-content: center; /* Center all items horizontally */
+    padding: 0 10px; /* Adding 0 padding to top and bottom and 10px padding to right and left */
+    /* background: linear-gradient(135deg, #00AAFF, #FF69B4); */
+    background: lightgray; /* */
+}
+
+/* Styling elements with class 'wrong' */
+.wrong {
+    color: red; /* Setting text color to red */
+}
+
+/* Styling an element with class 'wrapper', basically creating overall box for the game */
+.wrapper{
+    width: 400px; /* Setting a specific width */
+    background-color: #fff; /* White background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    /* 0: horizontal shadow offset; 10: vertical shadow offset; 25: how blurry shadow will be, rgba: almost transparent due to 0.1 opacity */
+}
+
+/* Styling 'h1' elements inside '.wrapper', basically "Mock Wordle" */
+.wrapper h1{
+    font-size: 22px; /* decreasing font size (h1 tag) */
+    text-align: center; /* Centering text */
+    font-weight: 500; /* Setting font weight (boldness) */
+    border-bottom: 2px solid #ccc; /* Adding & styling a border at the bottom (below h1) */
+    margin: 0 20px; /* 20px away from left and right sides of box */
+    padding: 20px 25px; /* Adding padding */
+}
+
+/* Styling elements with class 'content' inside '.wrapper', basically styling everything below border line (buttons, guesses, hints, etc.) */
+.wrapper .content{
+    margin: 25px 25px 30px; /* 25: top; 25: right and left: 30: bottom */
+}
+
+/* Styling elements with class 'word' inside '.content', basically styling Guesses, Incorrect Answers, & Hints */
+.content .word{
+    display: flex; /* Using flexbox for layout, alignment/resizing, etc.  */
+    flex-wrap: wrap; /* if the words overflow the box space, then they will continue on a new line */
+    justify-content: center; /* Centering items horizontally */
+}
+
+/* Styling input elements inside '.word' */
+.word input{
+    height: 51px; /* Setting height */
+    width: 50px; /* Setting width */
+    margin: 4px; /* Adding margins */
+    color: #0F9D58; /* Setting text color */
+    border: 1px solid #b5b5b5; /* Adding a border */
+    background: none; /* Removing background */
+    text-align: center; /* Centering text */
+    border-radius: 10px; /* Adding rounded corners */
+    text-transform: uppercase; /* Uppercasing text */
+    pointer-events: none; /* Disabling pointer events */
+    font-size: 22px; /* Setting font size */
+    font-weight: 500; /* Setting font weight */
+}
+
+/* Styling elements with class 'type-input' */
+.type-input{
+    z-index: -999; /* Setting a low z-index */
+    position: absolute; /* Positioning */
+    pointer-events: none; /* Disabling pointer events */
+    opacity: 0; /* Making element invisible */
+}
+
+/* Adjusting the first child input element inside '.word' */
+.word input:first-child{
+    margin-left: 0; /* Removing left margin */
+}
+
+/* Styling elements with class 'info' inside '.content' */
+.content .info{
+    margin: 20px 0; /* Adding margins */
+}
+
+/* Styling 'p' elements inside '.info' */
+.info p{
+    font-size: 16px; /* Setting font size */
+    margin-bottom: 10px; /* Adding a margin at the bottom */
+}
+
+/* Styling elements with class 'buttons' */
+.buttons{
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-between; /* Spacing items evenly */
+}
+
+/* Styling specific buttons inside '.buttons' */
+.content .buttons .restart, .content .buttons .showhint{
+    width: 48%; /* Setting width */
+    border: none; /* Removing border */
+    cursor: pointer; /* Setting cursor style */
+    color: #fff; /* Setting text color */
+    outline: none; /* Removing outline */
+    padding: 10px 0; /* Adding padding */
+    font-size: 17px; /* Setting font size */
+    /* background: linear-gradient(135deg, #00AAFF, #FF69B4); */
+    background: lightgray;
+    border-radius: 10px; /* Adding rounded corners */
+    transition: all 0.3s ease; /* Adding transition */
+}
+
+/* Styling button hover states */
+.content .buttons .restart:hover, .content .buttons .showhint:hover {
+    background-color: #1e88e5; /* Changing background color of restart and hint buttons while hovering over them with mouse cursor until a new color is selected */
+}
+
+/* Applying responsive styles for screens up to 450px wide */
+@media screen and (max-width: 450px) {
+    
+    /* Adjusting width for smaller screens */
+    .wrapper{
+        width: 100%;
+    }
+
+    /* Adjusting font size and padding for smaller screens */
+    .wrapper h1{
+        font-size: 20px;
+        padding: 16px 20px;
+    }
+
+    /* Adjusting margins for smaller screens */
+    .wrapper .content{
+        margin: 25px 20px 30px;
+    }
+
+    /* Adjusting dimensions and font size for smaller screens */
+    .word input{
+        height: 46px;
+        width: 45px;
+        margin: 3px;
+        font-size: 19px;
+    }
+
+    /* Adjusting font size for smaller screens */
+    .content .info p{
+        font-size: 15px;
+    }
+
+    /* Adjusting padding and font size for smaller screens */
+    .content .buttons .restart{
+        padding: 9px 0;
+        font-size: 15px;
+    }
+}
+
+/*
+
+
+/* Styling the color picker */
+#bgColorPicker {
+    margin-top: 10px; /* Add some space above the color picker */
+    padding: 8px; /* Add padding to the color picker */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Styling the color type labels and radio buttons */
+input[type="radio"] { /* This section targets and styles radio buttons. Radio buttons allow users to select only one option from a group of choices.  */
+    margin: 5px 5px 0 0; /* Add some space around the radio buttons */
+}
+
+label[for="solid"], label[for="gradient"] {
+    font-weight: bold; /* Make labels bold */
+}

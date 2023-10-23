@@ -9,7 +9,7 @@ Intermediate HTML/CSS/JS workshop for hack.place()
        - This is the environment/application we will use to code programs and projects.
       <img width="685" alt="image" src="https://github.com/hackplace-org/mock-wordle/assets/138071235/c99ee469-d347-492b-b81b-88ecb213f80d">
    4. Install the "Live Server" extension in Visual Studio Code
-       - Once Visual Studio Code is installed and you are able to open/access it, head over to the extensions tab on the sidebar to the left, and search up and install the "Live Server" extension.
+       - Once the Visual Studio Code application is installed and you are able to open/access it, head over to the extensions tab on the sidebar to the left, and search up and install the "Live Server" extension.
 
       <img width="773" alt="image" src="https://github.com/hackplace-org/mock-wordle/assets/138071235/3e09a0bb-9ea6-4cc0-bf36-ed8f52011d02">
 
